@@ -2,6 +2,29 @@
 
 
 {% block content %}
+<style>
+.btns:not(:disabled):not(.disabled).active, .btns:not(:disabled):not(.disabled):active, .show>.btns.dropdown-toggle {
+    color: #fff;
+    background-color:#550331;
+    border-color: #550331;
+}
+.btns:hover {
+color: #fff;
+background-color: #550331;
+border-color: #550331;
+}
+
+.btns {
+color: #fff;
+background-color: #550331;
+border-color: #550331;
+}
+.btns.focus, .btns:focus {
+box-shadow: 0 0 0 .2rem #550331;
+}
+
+
+    </style>
 
 <div class="container">
     <div class="p-3 m-3">
@@ -9,8 +32,8 @@
             <div class="text-center col">
             
                 <img
-                src="https://th.bing.com/th/id/Rd51d7c0fde6d96a31538a86cbd57f3c0?rik=%2fTJxRkU2V371QQ&riu=http%3a%2f%2ftechnologyend.com%2fwp-content%2fuploads%2f2015%2f11%2fwhy-shop-online.jpg&ehk=v1KiYT0i5U1ABCRueDSdLqnazh2BdlVD89Z4qXE0Kgs%3d&risl=&pid=ImgRaw" alt=""
-                class="" style="height: 150px;">
+                src="https://clipart.world/wp-content/uploads/2021/07/Shopping-clipart-for-free.png" alt=""
+                class="" style="height: 180px;">
             <hr>
             </div>
             <h3 class="alert alert-light rounded-pill" style="text-align:center" >Login</h3>
@@ -28,7 +51,7 @@
                     <label for="">Email</label>
                     <input required type="email" name="email" id=""
                     value="{{values.email}}" 
-                    class=" form-control-sm form-control" placeholder="abc@gmail.com">
+                    class=" form-control-sm form-control" placeholder="example@gmail.com">
                 </div>
 
 
@@ -41,13 +64,13 @@
                      class="form-control form-control-sm" >
                 </div>
 
-                <!--Checkme button-->
+                <!-- Checkme button
             <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label d-grid gap-2" for="exampleCheck1">Check me out</label>
-                </div>
+                </div> -->
                 <hr>
-                <button type="submit" class="btn btn-sm btn-success col-lg-12">Login</button>
+                <button type="submit" class="btn btn-sm btn-success col-lg-12 btns mb-3">Login</button>
 
 
                 
