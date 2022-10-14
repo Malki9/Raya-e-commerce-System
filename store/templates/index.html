@@ -7,6 +7,7 @@
 <style>
 .btno {
         border-color: #03000266 ;
+		background-color: rgb(80, 3, 53);
         }
 .btno:hover {
 	border-color: rgb(80, 3, 53);
@@ -14,7 +15,10 @@
 .btno.focus, .btno:focus {
 	box-shadow: 0 0 0 .2rem rgb(80, 3, 53);
 }
-
+.btnos:hover {
+	background-color: rgb(80, 3, 53);
+	border-color: rgb(80, 3, 53);
+}
 
 .btno:not(:disabled):not(.disabled).active, .btno:not(:disabled):not(.disabled):active, .show>.btno.dropdown-toggle {
 	color: #fff;
@@ -32,11 +36,11 @@
 		<div class="col-lg-3 mx-auto">
 			<div class="list-group">
 
-				<a href="/" class="list-group-item list-group-item-action btn btn-outline-success btno">All Products</a>
+				<a href="/" class="list-group-item list-group-item-action btn btn-outline-success btno" style="background-color: rgb(199, 174, 191)">All Products</a>
 
 				{% for category in categories %}
 				<a href="/?category={{category.id}}"
-					class="list-group-item list-group-item-action btn btn-outline-success btno">{{category.name}}</a>
+					class="list-group-item list-group-item-action btn btn-outline-success btno" style="background-color: rgb(199, 174, 191)">{{category.name}}</a>
 				{% endfor %}
 			</div>
 		</div>
@@ -61,20 +65,20 @@
 								{% csrf_token %}
 								<input hidden type="text" name='product' value='{{product.id}}'>
 								<input hidden type="text" name='remove' value='True'>
-								<input type="submit" value=" - " class="btn btn-block btn-success border-right">
+								<input type="submit" value=" - " class="btn btn-block btn-success border-right btno btnos">
 							</form>
-							<div class="text-center col btn btn-success">{{product|cart_quantity:request.session.cart}} in Cart</div>
+							<div class="text-center col btn btn-success btno btnos">{{product|cart_quantity:request.session.cart}} in Cart</div>
 							<form action="/#{{product.id}}" class="col-2 " method="post">
 								{% csrf_token %}
 								<input hidden type="text" name='product' value='{{product.id}}'>
-								<input type="submit" value=" + " class="btn btn-block btn-success border-left">
+								<input type="submit" value=" + " class="btn btn-block btn-success border-left btno btnos">
 							</form>
 						</div>
 						{% else %}
 						<form action="/#{{product.id}}" method="POST" class="btn-block">
 							{% csrf_token %}
 							<input hidden type="text" name='product' value='{{product.id}}'>
-							<input type="submit" class="float-right btn btn-success form-control"
+							<input type="submit" class="float-right btn btn-success form-control btno" 
 								value="Add To Cart">
 						</form>
 						{% endif %}
