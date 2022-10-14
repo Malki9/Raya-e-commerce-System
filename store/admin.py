@@ -6,9 +6,7 @@ from .models.orders import Order
 
 
 class AdminProduct(admin.ModelAdmin):
-
     list_display = ['name', 'price', 'category']
-
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -19,7 +17,3 @@ admin.site.register(Products,AdminProduct)
 admin.site.register(Category)
 admin.site.register(Customer)
 admin.site.register(Order)
-
-
-
-
