@@ -4,9 +4,40 @@
 {% block content %}
 {% load cart %}
 {% load custom_filter %}
+<style>
+.btnx {
+color: #550331;
+background-color: transparent;
+background-image: none;
+border-color: #550331;
+}
+
+.btnx:hover {
+color: #fff;
+background-color: #550331;
+border-color: #550331;
+}
+.btnx:not(:disabled):not(.disabled).active, .btnx:not(:disabled):not(.disabled):active, .show>.btnx.dropdown-toggle {
+color: #fff;
+background-color: #550331;
+border-color: #550331;
+}
+.btnx.focus, .btnx:focus {
+box-shadow: 0 0 0 .2rem #550331;
+}
+.btnx {
+color: #550331;
+background-color: transparent;
+background-image: none;
+border-color: #550331;
+}
+
+
+</style>
 <div class="container">
    <div class="border rounded p-4 m-4">
-        <p class="display-4 pl-4 ml-4 btn btn-success rounded-pill">Your Cart</p>
+
+        <h3 style="color:#550331;" align="center"><b>Your Cart</b></h3>
         <hr>
         <table class="table">
             <thead>
@@ -45,7 +76,7 @@
         </table>
         <hr>
         <div class="m-3 p-3">
-            <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-success border rounded  col-lg-3 float-right">Check out</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-success border rounded  col-lg-3 float-right btnx">Check out</a>
         </div>
    </div>
 </div>
@@ -80,7 +111,7 @@
                     <input type="text" name="phone" id="" class="form-control" placeholder="" aria-describedby="helpId">
                   </div>
 
-                  <input type="submit" class="btn float-right btn-outline-success col-lg-6" value="Check out">
+                  <input type="submit" class="btn float-right btn-outline-success col-lg-6 btnx" value="Check out">
             </form>
           </div>
         </div>
